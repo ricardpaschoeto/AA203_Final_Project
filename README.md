@@ -16,8 +16,12 @@
 * [Related Work](#related-work)
 * [Project setting](#project-setting)
 * [Preliminary Results](#preliminary-results)
+* [Problem Statement](#problem-statement)
+* [Approach](#approach)
+* [Experiments](#experiments)
 * [Developers](#developers)
-* [Conclusion](#conclusion)
+* [Conclusions and Future Work](#conclusions-and-future-work)
+* [References](#references)
 
 
 
@@ -125,15 +129,19 @@ Below we enumerate our project contributions:
 
 ## Related Work
 
-<p align="justify"> In the paper "Brandon Amos, Ivan Dario Jimenez Rodriguez, Jacob Sacks, Byron Boots, J. Zico Kolter - Differentiable MPC for End-to-end Planning and Control, Oct 2019", the authors present the basis for using the Differentiable Model Predictive Control (MPC) as a policy for reinforcement learning in continuous pair action/state. The objective is to combine the behaviors of model-free and model-based technics. The approach is based on the fact that model-free reinforcement learning suffers from poor sample complexity and generalization, and these could be improved using Differentiable MPC as "expert" to generate qualifed data samples to the model-free system. Below is shown the MPC optimization problem:</p>
+<p align="justify"> In the last years, we have a considerable number of works related to Model Predictive Control (MPC), indirect methods, and iLQR to applying in autonomous systems. In our project, this material was essential to create the foundations.</p>
 
-<p align="center">
-  <img
-    src="https://user-images.githubusercontent.com/19806622/162861088-09d5d16d-e891-4ad6-83e5-7b346659eb69.png"
-  >
- </p>
- 
-<p align="justify"> The authors consider the MPC as a generic policy class u = &pi; (x<sub>init</sub>;C; f), where C is a cost function,and f is the model dynamics. By differentiating, we can learn the costs and dynamics model in an online policy process. The process to differentiate done by an effcient method provided by the authors for analytically differentiate through an iterative non-convex optimization, computing by an iterative LQR solver. In the end, the cost, and dynamics from an MPC expert have a loss based only on the policy (actions). Resuming, author's propose is provide a process where the cost and dynamics components can be extracted and analyze on their own (form model-based model MPC approach). The dynamics model and cost now can be learned entirely (by the model-free approach). This process will generate policies more data-efficient than a generic neural network, where the data comes from the "True" model.</p>
+<h3 align="justify"> Differentiable MPC for End-to-end Planning and Control [1]</h3>  <p align="justify"> In this work, the authors presented the foundations of Differentiable iLQR. They used this concept to implement Differentiable Model Predictive Control (MPC) as a Python library.</p>
+
+<h3 align="justify"> Real-time MPC with iLQR for Self-Driving in Carla [2]</h3> <p align="justify"> In this work the authot presented the concepts to apply iLQR and MPC to an autonomous vehicle system using Neural Networks together explicit system dynamics.</p>
+
+<h3 align="justify"> Robust Model Predictive Control for Autonomous Vehicle/Self-Driving Cars [3] </h3> <p align="justify"> In this paper the authors presented an approach for controlling front steering of an autonomous vehicle. The paper was our source regarding to Bicycle Model and model dynamics.</p>
+
+<h3 align="justify"> Control-Limited Differential Dynamic Programming [4] </h3> <p align="justify"> The authors propose a generalization of DDP which box inequality constraints on the controls using indirect methods and iLQR. The approach proposed was applied in a Car Parking and Humanoid Robot.</p>
+
+<h3 align="justify"> Constrained Iterative LQR for On-Road Autonomous Driving Motion Planning [5] </h3> <p align="justify"> The authors presented a new implementation of the iLQR algorithm to an autonomous driving car but with constraints applied (CILQR).</p>
+
+<h3 align="justify"> End-to-end Driving via Conditional Imitation Learning [6] </h3> <p align="justify"> In this paper the authors presented a new approach to imitation learning policy, generate by on high-level command input. They showed a simulation using the CARLA simulator.</p>
 
 ## Project setting
 
@@ -177,12 +185,14 @@ The statements of project settings follow the steps below:
 
 <p align="center">
   <img
-    src="https://user-images.githubusercontent.com/19806622/162863241-1014693e-1ed6-4087-a7c9-d90fb135c25c.png"
+    src="https://user-images.githubusercontent.com/19806622/162865094-88b5f7ec-44a5-4174-8e45-ac4d3b608ba0.png"
   >
  </p>
-
+ 
+<p align="center">Figure 2: Imitation Learning loss.</p>
 
 ## Developers
+
 
 | [<img src="https://avatars.githubusercontent.com/u/19806622?s=40&v=4" width=115><br><sub>Ricardo Paschoeto </sub>](https://github.com/ricardpaschoeto) |  [<img src="https://avatars.githubusercontent.com/u/4451713?v=4" width=115><br><sub>Srikanth Vidapanakal</sub>](https://github.com/sreakdgeek) |
 | :---: | :---: |
