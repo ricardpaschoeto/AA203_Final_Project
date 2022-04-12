@@ -274,7 +274,7 @@ The reference cost functions with heading/ cross track error:
 
 ### Phase 03
 
-<p align="justify"> We connect the Dynamics and costs to Differentiate MPC library to generate an optimal trajectory to our CARLA environment simulator. This process is a bit complicated because the problems with the Pytorch version and the specic way to transcribe the functions are delicate. Our first attempt was to create a Cost function and analyze the car movement.</p>
+<p align="justify"> We connect the Dynamics and costs to Differentiate MPC library to generate an optimal trajectory to our CARLA environment simulator. This process is a bit complicated because the problems with the Pytorch version and the specific way to transcribe the functions are delicate. Our first attempt was to create a Cost function and analyze the car movement.</p>
 
 ## Experiments
 
