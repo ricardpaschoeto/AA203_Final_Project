@@ -6,7 +6,7 @@
  >
  </p>
 
-## Índex 
+## Index 
 
 * [Developers](#developers)
 * [Tecnologies Applied](#tecnologies-applied)
