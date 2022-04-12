@@ -12,6 +12,7 @@
 * [Motivation](#motivation)
 * [Contributions](#contributions)
 * [Related Work](#related-work)
+* [Project setting](#project-setting)
 * [Tecnologies Applied](#tecnologies-applied)
 * [Developers](#developers)
 * [Conclusion](#conclusion)
@@ -64,11 +65,25 @@ Below we enumerate our project contributions:
 
 <p align="justify"> In the paper "Brandon Amos, Ivan Dario Jimenez Rodriguez, Jacob Sacks, Byron Boots, J. Zico Kolter - Differentiable MPC for End-to-end Planning and Control, Oct 2019", the authors present the basis for using the Differentiable Model Predictive Control (MPC) as a policy for reinforcement learning in continuous pair action/state. The objective is to combine the behaviors of model-free and model-based technics. The approach is based on the fact that model-free reinforcement learning suffers from poor sample complexity and generalization, and these could be improved using Differentiable MPC as "expert" to generate qualifed data samples to the model-free system. Below is shown the MPC optimization problem:</p>
 
+<p align="center">
+  <img
+    src="https://user-images.githubusercontent.com/19806622/162861088-09d5d16d-e891-4ad6-83e5-7b346659eb69.png"
+  >
+ </p>
+ 
+<p align="justify"> The authors consider the MPC as a generic policy class u = &pi; (x<sub>init</sub>;C; f), where C is a cost function,and f is the model dynamics. By differentiating, we can learn the costs and dynamics model in an online policy process. The process to differentiate done by an effcient method provided by the authors for analytically differentiate through an iterative non-convex optimization, computing by an iterative LQR solver. In the end, the cost, and dynamics from an MPC expert have a loss based only on the policy (actions). Resuming, author's propose is provide a process where the cost and dynamics components can be extracted and analyze on their own (form model-based model MPC approach). The dynamics model and cost now can be learned entirely (by the model-free approach). This process will generate policies more data-efficient than a generic neural network, where the data comes from the "True" model.</p>
+
+## Project setting
+
+The statements of project settings follow the steps below:
+
+* <p align="justify"> First, we need to decide the dynamics for our model based Differentiable MPC. For the autonomous system, we have some options: Drone, autonomous car, autonomous robot, and so on. The choices come with a dynamic set with evolves different levels of complexity. We chose Autonomous vehicle driving setup with Carla-based simulation.</p>
+* <p align="justify"> Key idea of our work is to apply differentiable MPC where the cost and dynamics of the Autonomous Vehicle are learnt by optimizing the imitation learning loss using only observed controls as shown below:</p>
+
 
 
 ## Tecnologies Applied
  
- * Python 3.5.7
  * PyTorch/numpy
  * CARLA Simulator
  * Differentiable MPC library
