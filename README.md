@@ -9,6 +9,9 @@
 ## Índex 
 
 * [Project Description](#project-description)
+* [Motivation](#motivation)
+* [Contributions](#contributions)
+* [Related Work](#related-work)
 * [Tecnologies Applied](#tecnologies-applied)
 * [Developers](#developers)
 * [Conclusion](#conclusion)
@@ -39,7 +42,31 @@ controller in an Autonomous Driving setting. Below is presented the model propos
   >
  </p>
  
- ## Tecnologies Applied
+ ## Motivation
+ 
+<p align="justify"> We chose this project by giving the chance to mix the interest of the group members in the subject
+related to the artifcial intelligence area and control theory. The main objective was to look for a
+project that we can apply the concepts and ideas from the areas above in a real-life situation: path
+optimization and improvement performance of the autonomous system. And join the knowledge
+and experience of group members acquired and improved in related courses and training in related
+fields. Another point to highlight is associated with the technical advancements and opportunities
+in autonomous systems, Robotics, and Control.</p>
+
+## Contributions
+
+Below we enumerate our project contributions:
+
+* <p align="justify"> Our project has based on the paper [1], and it is an opportunity to extend the Theory presented by testing it with another dynamic model system (Actually works on Pendulum and Cartpole dynamics). </p>
+* <p align="justify"> Delivering new simulation data and reinforce concepts over recent techniques such as Differentiable MPC controller.</p>
+* <p align="justify"> The project can be used by researchers/students, in the future, in real-life projects, or basis for depth research.</p>
+
+## Related Work
+
+<p align="justify"> In the paper "Brandon Amos, Ivan Dario Jimenez Rodriguez, Jacob Sacks, Byron Boots, J. Zico Kolter - Differentiable MPC for End-to-end Planning and Control, Oct 2019", the authors present the basis for using the Differentiable Model Predictive Control (MPC) as a policy for reinforcement learning in continuous pair action/state. The objective is to combine the behaviors of model-free and model-based technics. The approach is based on the fact that model-free reinforcement learning suffers from poor sample complexity and generalization, and these could be improved using Differentiable MPC as "expert" to generate qualifed data samples to the model-free system. Below is shown the MPC optimization problem:</p>
+
+
+
+## Tecnologies Applied
  
  * Python 3.5.7
  * PyTorch/numpy
@@ -49,5 +76,6 @@ controller in an Autonomous Driving setting. Below is presented the model propos
 
 ## Developers
 
-
+| [<img src="https://avatars.githubusercontent.com/u/19806622?s=40&v=4" width=115><br><sub>Ricardo Paschoeto </sub>](https://github.com/ricardpaschoeto) |  [<img src="https://avatars.githubusercontent.com/u/4451713?v=4" width=115><br><sub>Srikanth Vidapanakal</sub>](https://github.com/sreakdgeek) |
+| :---: | :---: |
 
