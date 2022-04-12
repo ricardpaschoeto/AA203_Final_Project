@@ -9,9 +9,6 @@
 ## Índex 
 
 * [Project Description](#project-description)
-* [Project Status](#Project-Status)
-* [Application Funcionalities and Demonstration](#application-funcionalities-and-demonstration)
-* [Project Access](#acesso-ao-projeto)
 * [Tecnologies Applied](#tecnologies-applied)
 * [Developers](#developers)
 * [Conclusion](#conclusion)
@@ -38,8 +35,19 @@ controller in an Autonomous Driving setting. Below is presented the model propos
 
 <p align="center">
   <img
-    src="https://user-images.githubusercontent.com/19806622/162855349-09b272ad-7f7b-4551-8256-2754b44c7243.png"
+    src="https://user-images.githubusercontent.com/19806622/162855872-02362be6-4a69-4372-8421-a0ae3a0454e1.png"
   >
  </p>
+ 
+ ## Tecnologies Applied
+ 
+ * Python 3.5.7
+ * PyTorch/numpy
+ * CARLA Simulator
+ * Differentiable MPC library
+ * [locuslab/mpc.pytorch](https://locuslab.github.io/mpc.pytorch/)
+
+## Developers
+
 
 
