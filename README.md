@@ -8,6 +8,7 @@
 
 ## Índex 
 
+* [Developers](#developers)
 * [Tecnologies Applied](#tecnologies-applied)
 * [Project Description](#project-description)
 * [Carla Simulator](#carla-simulator)
@@ -19,11 +20,13 @@
 * [Problem Statement](#problem-statement)
 * [Approach](#approach)
 * [Experiments](#experiments)
-* [Developers](#developers)
 * [Conclusions and Future Work](#conclusions-and-future-work)
 * [References](#references)
 
+## Developers
 
+| [<img src="https://avatars.githubusercontent.com/u/19806622?s=40&v=4" width=115><br><sub>Ricardo Paschoeto </sub>](https://github.com/ricardpaschoeto) |  [<img src="https://avatars.githubusercontent.com/u/4451713?v=4" width=115><br><sub>Srikanth Vidapanakal</sub>](https://github.com/sreakdgeek) |
+| :---: | :---: |
 
 ## Tecnologies Applied
  
@@ -190,10 +193,4 @@ The statements of project settings follow the steps below:
  </p>
  
 <p align="center">Figure 2: Imitation Learning loss.</p>
-
-## Developers
-
-
-| [<img src="https://avatars.githubusercontent.com/u/19806622?s=40&v=4" width=115><br><sub>Ricardo Paschoeto </sub>](https://github.com/ricardpaschoeto) |  [<img src="https://avatars.githubusercontent.com/u/4451713?v=4" width=115><br><sub>Srikanth Vidapanakal</sub>](https://github.com/sreakdgeek) |
-| :---: | :---: |
 
