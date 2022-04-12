@@ -1,6 +1,10 @@
 <h1 align="center"> Differentiable MPC applied in a simulated Self Driving Car (CARLA Simulator) </h1>
 
-![Differentiable MPC](https://user-images.githubusercontent.com/19806622/162852879-2b87ec45-bb82-4fca-b396-9e3d709ae09c.png)
+<p align="center">
+  <img
+    src="https://user-images.githubusercontent.com/19806622/162852879-2b87ec45-bb82-4fca-b396-9e3d709ae09c.png"
+ >
+ </p>
 
 ## Índex 
 
@@ -31,5 +35,11 @@ learning by differentiating through MPC and using KKT conditions of the convex o
 fixed point of the controller. The cost and dynamics of the controller are learnt by minimizing the
 Imitation learning loss in an end-to-end fashion. Our goal is to develop a robust end-to-end MPC
 controller in an Autonomous Driving setting. Below is presented the model proposed:</p>
+
+<p align="center">
+  <img
+    src="https://user-images.githubusercontent.com/19806622/162855349-09b272ad-7f7b-4551-8256-2754b44c7243.png"
+  >
+ </p>
 
 
