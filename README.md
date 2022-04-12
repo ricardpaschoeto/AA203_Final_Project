@@ -8,15 +8,25 @@
 
 ## Índex 
 
+* [Tecnologies Applied](#tecnologies-applied)
 * [Project Description](#project-description)
 * [Carla Simulator](#carla-simulator)
 * [Motivation](#motivation)
 * [Contributions](#contributions)
 * [Related Work](#related-work)
 * [Project setting](#project-setting)
-* [Tecnologies Applied](#tecnologies-applied)
+* [Preliminary Results](#preliminary-results)
 * [Developers](#developers)
 * [Conclusion](#conclusion)
+
+
+
+## Tecnologies Applied
+ 
+ * PyTorch/numpy
+ * CARLA Simulator
+ * Differentiable MPC library
+ * [locuslab/mpc.pytorch](https://locuslab.github.io/mpc.pytorch/)
 
 ## Project Description
 
@@ -48,10 +58,52 @@ controller in an Autonomous Driving setting. Below is presented the model propos
  
  <p align="center">
   <img
-    src="https://user-images.githubusercontent.com/19806622/162855872-02362be6-4a69-4372-8421-a0ae3a0454e1.png"
+    width="800"
+    height="500"
+    src="https://user-images.githubusercontent.com/19806622/162863465-6b600c42-9588-4268-9be3-4bc308d0fa71.png"
   >
  </p>
  
+<p align="justify"> CARLA is an open-source simulator developed to support, train and validate autonomous vehicle systems. It provides open source, protocols and various scenarios. It also extends support for a Conditional Imitation Learning Agent.</p>
+
+### Conditional Imitation Learning Agent
+
+We intend to use conditional imitation learning agent trained on CARLA simulator for our exper-
+iments. Below are the measurements and controls provided as part of the dataset:
+1. Steer, float
+2. Gas, float
+3. Brake, float
+4. Hand Brake, boolean
+5. Reverse Gear, boolean
+6. Steer Noise, float
+7. Gas Noise, float
+8. Brake Noise, float
+9. Position X, float
+10. Position Y, float
+11. Speed, float
+12. Collision Other, float
+13. Collision Pedestrian, float
+14. Collision Car, float
+15. Opposite Lane Inter, float
+16. Sidewalk Intersect, float
+17. Acceleration X, float
+18. Acceleration Y, float
+19. Acceleration Z, float
+20. Platform time, float
+21. Game Time, float
+22. Orientation X, float
+23. Orientation Y, float
+24. Orientation Z, float
+25. High level command, int ( 2 Follow lane, 3 Left, 4 Right, 5 Straight)
+26. Noise, Boolean ( If the noise, perturbation, is activated, (Not Used) )
+27. Camera (Which camera was used)
+28. Angle (The yaw angle for this camera)
+
+Reference: (https://github.com/carla-simulator/imitation-learning)
+
+<p align="justify"> The key idea of conditional imitation learning is that an end-to-end learning agent cannot handle the intersection unless explicitly guided by navigational commands.</p>
+
+Reference: (http://vladlen.info/papers/conditional-imitation.pdf)
  
  ## Motivation
  
@@ -119,12 +171,16 @@ The statements of project settings follow the steps below:
 
 <p align="justify"> Goal of this project is that without explicitly defining the dynamics, differentiable MPC controller would learn the dynamics and cost from the expert agent by explicitly imitating the control actions and overall minimizing the imitation loss.</p>
 
-## Tecnologies Applied
- 
- * PyTorch/numpy
- * CARLA Simulator
- * Differentiable MPC library
- * [locuslab/mpc.pytorch](https://locuslab.github.io/mpc.pytorch/)
+## Preliminary Results
+
+<p align="justify"> Our first simulations were done to familiarize with the coding process to generate the learning data from Differentiable MPC. We use the sample data from cart-pole to generate data that we can use as a benchmark for our data in the future.</p>
+
+<p align="center">
+  <img
+    src="https://user-images.githubusercontent.com/19806622/162863241-1014693e-1ed6-4087-a7c9-d90fb135c25c.png"
+  >
+ </p>
+
 
 ## Developers
 
