@@ -194,3 +194,17 @@ The statements of project settings follow the steps below:
  
 <p align="center">Figure 2: Imitation Learning loss.</p>
 
+## Problem Statement
+
+The task of the project is an Autonomous vehicle simulation and, to reach this task, we integrated three main points:
+
+1. A set of data to respect to control parameters from a Neural Network to calculate part of system dynamics.
+2. A vehicle environment that gave us the simulated measuring of car movement and the reference trajectory.
+3. A class Differentiable Model Predictive Control using Pytorch matrices and vectors with the cost function,
+
+<p align="center">
+  <img
+    src="https://user-images.githubusercontent.com/19806622/162944464-a8db994f-ae60-4213-8751-29d3e1307c86.png"
+  >
+ </p>
+
