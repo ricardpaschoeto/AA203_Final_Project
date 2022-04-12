@@ -46,6 +46,11 @@ controller in an Autonomous Driving setting. Below is presented the model propos
  
  ## Carla Simulator
  
+ <p align="center">
+  <img
+    src="https://user-images.githubusercontent.com/19806622/162855872-02362be6-4a69-4372-8421-a0ae3a0454e1.png"
+  >
+ </p>
  
  
  ## Motivation
@@ -101,11 +106,9 @@ The statements of project settings follow the steps below:
 
  <p align="center">
   <img
-    src="https://user-images.githubusercontent.com/19806622/162862326-0f13c9f0-cc18-46ad-98c4-5271a0c8af35.png"
+    src="https://user-images.githubusercontent.com/19806622/162863241-1014693e-1ed6-4087-a7c9-d90fb135c25c.png"
   >
  </p>
-
-Where:
 
 * x, y - Position
 * &psi; - Orientation
