@@ -9,6 +9,7 @@
 ## Índex 
 
 * [Project Description](#project-description)
+* [Carla Simulator](#carla-simulator)
 * [Motivation](#motivation)
 * [Contributions](#contributions)
 * [Related Work](#related-work)
@@ -42,6 +43,10 @@ controller in an Autonomous Driving setting. Below is presented the model propos
     src="https://user-images.githubusercontent.com/19806622/162855872-02362be6-4a69-4372-8421-a0ae3a0454e1.png"
   >
  </p>
+ 
+ ## Carla Simulator
+ 
+ 
  
  ## Motivation
  
@@ -80,7 +85,36 @@ The statements of project settings follow the steps below:
 * <p align="justify"> First, we need to decide the dynamics for our model based Differentiable MPC. For the autonomous system, we have some options: Drone, autonomous car, autonomous robot, and so on. The choices come with a dynamic set with evolves different levels of complexity. We chose Autonomous vehicle driving setup with Carla-based simulation.</p>
 * <p align="justify"> Key idea of our work is to apply differentiable MPC where the cost and dynamics of the Autonomous Vehicle are learnt by optimizing the imitation learning loss using only observed controls as shown below:</p>
 
+<p align="center">
+  <img
+    src="https://user-images.githubusercontent.com/19806622/162862170-bfc12c7a-3be7-421b-927c-5295326bea5c.png"
+  >
+ </p>
+ 
+ Typically the expected dynamics of an autonomous vehicle are described below:
+ 
+ <p align="center">
+  <img
+    src="https://user-images.githubusercontent.com/19806622/162862265-9d79f663-521e-4da3-a3a5-c28ac242f3fa.png"
+  >
+ </p>
 
+ <p align="center">
+  <img
+    src="https://user-images.githubusercontent.com/19806622/162862326-0f13c9f0-cc18-46ad-98c4-5271a0c8af35.png"
+  >
+ </p>
+
+Where:
+
+* x, y - Position
+* &psi; - Orientation
+* v - velocity
+* CTE - cross track error
+* a - Acceleration
+* &delta; - steering angle (range: -25 degrees to +25 degrees)
+
+<p align="justify"> Goal of this project is that without explicitly defining the dynamics, differentiable MPC controller would learn the dynamics and cost from the expert agent by explicitly imitating the control actions and overall minimizing the imitation loss.</p>
 
 ## Tecnologies Applied
  
