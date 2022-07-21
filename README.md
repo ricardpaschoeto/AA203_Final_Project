@@ -226,7 +226,7 @@ Subject to x<sub>t+1</sub> = f(x<sub>t</sub>, u<sub>t</sub>)
 
 <p align="center">x<sub>1</sub> = x<sub>init</sub></p>
 
-The code supports a quadratic cost function C and non-linear system transition dynamicsf.
+The code supports a quadratic cost function C and non-linear system transition dynamics f.
 
 ### Phase 02
 
